@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script language="javascript">
+function BMI()
+{
+var apple = parseFloat(document.formku.apple.value);
+var pen = parseFloat(document.formku.pen.value);
+document.formku.applepen.value = apple/(pen*pen);
+
+if (document.formku.applepen.value>=0&&document.formku.applepen.value<17)
+{
+document.formku.badan.value = "skinny"
+}
+
+else if (document.formku.applepen.value>=17&&document.formku.applepen.value<23)
+{
+document.formku.badan.value = "normal"
+}
+
+else if (document.formku.applepen.value>=23&&document.formku.applepen.value<27)
+{
+document.formku.badan.value = "fat"
+}
+
+else if (document.formku.applepen.value>=27&&document.formku.applepen.value<100000000)
+{
+document.formku.badan.value = "obesity"
+}
+}
+
+function IMB()
+{
+var pinapple = parseFloat(document.batman.pinapple.value);
+var pencil = parseFloat(document.batman.pencil.value);
+document.batman.svb.value = pinapple/(pencil*pencil);
+
+if (document.batman.svb.value>=0&&document.batman.svb.value<18)
+{
+document.batman.bvs.value = "skinny"
+}
+
+else if (document.batman.svb.value>=18&&document.batman.svb.value<25)
+{
+document.batman.bvs.value = "normal"
+}
+
+else if (document.batman.svb.value>=25&&document.batman.svb.value<27)
+{
+document.batman.bvs.value = "fat"
+}
+
+else if (document.batman.svb.value>=27&&document.batman.svb.value<100000000)
+{
+document.batman.bvs.value = "obesity"
+}
+
+}
+</script>
+</head>
+	<body>
+		
+		<form name="formku">
+		<font size="50">Body Mass Index for Men</font>
+
+		<p>Weight : <input name="apple"> kg
+		</p><p>Height : <input name="pen"> m (format example=1.60)
+		</p><p><input value="CALCULATE" onclick="BMI()" type="button"> 
+		</p><p><input value="Clear" type="reset">
+
+		</p><p>BMI Scale		   &nbsp;: <input name="applepen">
+		</p><p>Body Type	: <input name="badan"></p></form>
+		<hr>
+		<form name="batman">
+		<font size="50">Body Mass Index for Women </font>
+
+		<p>Weight : <input name="pinapple"> kg
+		</p><p>Height : <input name="pencil"> m (format example=1.60)
+		</p><p><input value="CALCULATE" onclick="IMB()" type="button"> 
+		</p><p><input value="Clear" type="reset">
+
+		</p><p>BMI Scale		   &nbsp;: <input name="svb">
+		</p><p>Body Type	: <input name="bvs">
+		</p></form>
+	</body>
+</html>
